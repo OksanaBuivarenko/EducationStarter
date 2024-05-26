@@ -1,0 +1,28 @@
+spring:
+  application:
+    name: journal
+  datasource:
+    url: jdbc:postgresql://localhost:5435/journal_db
+    username: user
+    password: password
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    defer-datasource-initialization: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        temp:
+          use_jdbc_metadata_defaults: false
+    database-platform: org.hibernate.dialect.PostgreSQL9Dialect
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: true
+  sql:
+    init:
+      data-locations: classpath:data.sql
+      mode: always
+
+starter:
+  enabled: true
+  handlerEnabled: true
+

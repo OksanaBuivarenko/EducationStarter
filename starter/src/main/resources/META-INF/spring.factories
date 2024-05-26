@@ -1,0 +1,7 @@
+org.springframework.boot.env.EnvironmentPostProcessor=\
+  t.education.starter.init.StarterPostProcessor
+
+org.springframework.boot.diagnostics.FailureAnalyzer=\
+  t.education.starter.analyzer.StarterFailureAnalyzer
+
+
